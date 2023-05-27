@@ -35,6 +35,7 @@ public class TrainController {
 
     @GetMapping("/calculate-avaiable-seats")
     public Integer checkSeatAvailability(@RequestBody SeatAvailabilityEntryDto seatAvailabilityEntryDto){
+
         Integer count = trainService.calculateAvailableSeats(seatAvailabilityEntryDto);
         return count;
     }
@@ -54,7 +55,6 @@ public class TrainController {
     public Integer calculateOldestPersonTravelling(@PathVariable("trainId")Integer trainId){
 
         //We need to find out the oldest person Travellign
-
         try{
             Integer age = trainService.calculateOldestPersonTravelling(trainId);
             return  age;
