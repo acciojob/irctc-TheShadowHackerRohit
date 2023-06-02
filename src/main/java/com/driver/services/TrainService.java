@@ -66,7 +66,7 @@ departureTime : This is the time it takes to start from the first station and to
 
         Train savedTrain = trainRepository.save(train);
 
-        return train.getTrainId();
+        return savedTrain.getTrainId();
     }
 
     public Integer calculateAvailableSeats(SeatAvailabilityEntryDto seatAvailabilityEntryDto){
